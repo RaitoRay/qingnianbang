@@ -20,7 +20,7 @@
 
 <script>
 	export default {
-		name:"bewsbox",
+		name:"newsbox",
 		props:{
 			item:{
 				type:Object,
@@ -60,17 +60,15 @@
 		flex-direction: column;
 		justify-content: space-between;
 		.title{
-			.t{
-				font-size: 36rpx;
-				color:#333;
-				text-overflow: -o-ellipsis-lastline;
-				overflow: hidden;				//溢出内容隐藏
-				text-overflow: ellipsis;		//文本溢出部分用省略号表示
-				display: -webkit-box;			//特别显示模式
-				-webkit-line-clamp: 2;			//行数
-				line-clamp: 2;					
-				-webkit-box-orient: vertical;	//盒子中内容竖直排列	
-			}
+			font-size: 36rpx;
+			color:#333;
+			text-overflow: -o-ellipsis-lastline;
+			overflow: hidden;				//溢出内容隐藏
+			text-overflow: ellipsis;		//文本溢出部分用省略号表示
+			display: -webkit-box;			//特别显示模式
+			-webkit-line-clamp: 2;			//行数
+			line-clamp: 2;					
+			-webkit-box-orient: vertical;	//盒子中内容竖直排列			
 		}
 		.info{
 			font-size: 26rpx;

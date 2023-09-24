@@ -1,18 +1,18 @@
 <template>
 	<view class="newsbox">
 		<view class="pic">
-			<image src="../../static/images/0.jpg" mode="aspectFill"></image>
+			<image :src="item.picurl" mode="aspectFill"></image>
 		</view>
 		<view class="text">
-			<view class="title">
-				<!-- 如果出现省略号后下一行还有字，再弄一个标签，把样式弄好这个标签上 -->
-				<view class="t">
-					默认的新闻默认的新闻默认的新闻默认的新闻默认的新闻默认的新闻默认的新闻默认的新闻
-				</view>
+			<view class="title">				
+				{{item.title}}	
 			</view>
-			<view class="info">
-				<text>作者名称</text>
-				<text>998浏览</text>
+			<view class="info" v-if="!item.looktime">
+				<text>{{item.author}}</text>
+				<text>{{item.hits}}浏览</text>
+			</view>
+			<view class="info" v-else>
+				<text>浏览时间：{{item.looktime}}</text>
 			</view>
 		</view>
 	</view>
